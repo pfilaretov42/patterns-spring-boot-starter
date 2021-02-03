@@ -1,4 +1,4 @@
-package pro.filaretov.blackdots;
+package pro.filaretov.spring.patterns.blackdots;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;

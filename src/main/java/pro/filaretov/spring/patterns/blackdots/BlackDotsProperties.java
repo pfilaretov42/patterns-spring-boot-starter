@@ -1,4 +1,4 @@
-package pro.filaretov.blackdots;
+package pro.filaretov.spring.patterns.blackdots;
 
 import lombok.Getter;
 import lombok.Setter;
