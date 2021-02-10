@@ -1,4 +1,4 @@
-package pro.filaretov.spring.patterns.blackdots;
+package pro.filaretov.spring.patterns.blackdots.starter;
 
 /**
  *
