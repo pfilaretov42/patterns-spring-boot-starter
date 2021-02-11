@@ -1,0 +1,10 @@
+{
+  "properties": [
+    {
+      "name": "black.dots.enabled",
+      "type": "java.lang.Boolean",
+      "defaultValue": true,
+      "description": "Whether BlackDots auto configuration should be enabled or not."
+    }
+  ]
+}

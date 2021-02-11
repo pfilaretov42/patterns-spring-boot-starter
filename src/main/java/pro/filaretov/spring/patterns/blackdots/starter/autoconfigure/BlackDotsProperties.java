@@ -17,6 +17,9 @@ public class BlackDotsProperties {
 
     public static final String DEFAULT_OCTAVE = "first";
 
+    /**
+     * Which octave to play into.
+     */
     private String octave = DEFAULT_OCTAVE;
 
     @NestedConfigurationProperty
@@ -27,6 +30,9 @@ public class BlackDotsProperties {
     @ToString
     public static class Instrument {
 
+        /**
+         * Which instrument type to play.
+         */
         private String type = "Grand Piano";
     }
 }
