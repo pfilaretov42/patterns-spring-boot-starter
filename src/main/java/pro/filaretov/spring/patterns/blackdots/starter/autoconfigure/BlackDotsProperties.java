@@ -2,6 +2,7 @@ package pro.filaretov.spring.patterns.blackdots.starter.autoconfigure;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.NestedConfigurationProperty;
 
@@ -10,6 +11,7 @@ import org.springframework.boot.context.properties.NestedConfigurationProperty;
  */
 @Getter
 @Setter
+@ToString
 @ConfigurationProperties(prefix = "black.dots")
 public class BlackDotsProperties {
 
@@ -22,6 +24,7 @@ public class BlackDotsProperties {
 
     @Getter
     @Setter
+    @ToString
     public static class Instrument {
 
         private String type = "Grand Piano";
