@@ -35,6 +35,8 @@ public class InjectListBeanPostProcessor implements BeanPostProcessor {
 
             // we relay on a convention that a bean name is a decapitalised class name
             List<Object> beans = Arrays.stream(classes)
+                // context.getBean(aClass) may not work if context holds a bean proxy
+                // which is interface proxy, not inherited proxy. That's why lookup by bean ID is a better way.
                 .map(aClass -> Introspector.decapitalize(aClass.getSimpleName()))
                 .map(name -> context.getBean(name))
                 .collect(Collectors.toList());
