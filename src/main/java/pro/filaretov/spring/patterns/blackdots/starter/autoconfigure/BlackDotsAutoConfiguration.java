@@ -6,6 +6,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
 /**
  *
@@ -15,6 +16,7 @@ import org.springframework.context.annotation.Configuration;
 @ConditionalOnProperty(value = "black.dots.enabled", havingValue = "true", matchIfMissing = true)
 @EnableConfigurationProperties(BlackDotsProperties.class)
 @ComponentScan("pro.filaretov.spring.patterns.blackdots.starter")
+@Import(LegacyBeanDefinitionRegistrar.class)
 @Slf4j
 public class BlackDotsAutoConfiguration {
 

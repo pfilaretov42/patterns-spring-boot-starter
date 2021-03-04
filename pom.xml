@@ -49,7 +49,12 @@
 		<dependency>
 			<groupId>org.reflections</groupId>
 			<artifactId>reflections</artifactId>
-			<version>0.9.12</version>
+			<version>0.9.11</version>
+		</dependency>
+		<dependency>
+			<groupId>pro.filaretov.legacy</groupId>
+			<artifactId>patterns-spring-boot-legacy</artifactId>
+			<version>111.3</version>
 		</dependency>
 
 
@@ -59,5 +64,24 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.2.0</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
