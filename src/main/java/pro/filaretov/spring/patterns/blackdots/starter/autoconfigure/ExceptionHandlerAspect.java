@@ -1,20 +1,22 @@
 package pro.filaretov.spring.patterns.blackdots.starter.autoconfigure;
 
-import org.aspectj.lang.annotation.AfterThrowing;
-import org.aspectj.lang.annotation.Aspect;
+import lombok.extern.slf4j.Slf4j;
+import org.aopalliance.intercept.MethodInterceptor;
+import org.aopalliance.intercept.MethodInvocation;
 
 /**
- * Aspect to handle exception (it's not working as requires maven aspectj plugin etc.).
- * The problem is that pointcut can only contain constant expression and cannot be configured dynamically,
- * but the spring boot starter does not know about packages, classes and methods
- * it's going to be used for in main app(s).
+ * Method interceptor to add custom logic.
  */
-@Aspect
-public class ExceptionHandlerAspect {
+@Slf4j
+public class ExceptionHandlerAspect implements MethodInterceptor {
 
-    @AfterThrowing(pointcut = "execution(* pro.filaretov..*.*(..))", throwing = "exception")
-    public void handle(ClassCastException exception) {
-        System.out.println("Something went wrong with instrument");
+    @Override
+    public Object invoke(MethodInvocation methodInvocation) throws Throwable {
+        try {
+            return methodInvocation.proceed();
+        } catch (ClassCastException e) {
+            log.warn("Instruments are not castable!");
+            throw e;
+        }
     }
-
 }

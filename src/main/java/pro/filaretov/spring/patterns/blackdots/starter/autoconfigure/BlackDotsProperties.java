@@ -29,6 +29,11 @@ public class BlackDotsProperties {
     @Size(min = 2, max = 20)
     private String octave = DEFAULT_OCTAVE;
 
+    /**
+     * Which package to handle with dynamic pointcut
+     */
+    private String pointcutPackage;
+
     @Valid
     @NestedConfigurationProperty
     private Instrument instrument = new Instrument();
