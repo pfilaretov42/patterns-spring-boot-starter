@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.Import;
+import pro.filaretov.spring.patterns.blackdots.starter.wrapper.DealerControllerAdvice;
 
 /**
  *
@@ -67,4 +68,11 @@ public class BlackDotsAutoConfiguration {
         ExceptionHandlerAspect exceptionHandlerAspect) {
         return new DefaultPointcutAdvisor(customPointcut, exceptionHandlerAspect);
     }
+
+    // TODO - for some reason DealerControllerAdvice is picked up as a @Component.
+    //      Why? There is no component scan on its package, isn't there?
+//    @Bean
+//    public DealerControllerAdvice dealerControllerAdvice() {
+//        return new DealerControllerAdvice();
+//    }
 }

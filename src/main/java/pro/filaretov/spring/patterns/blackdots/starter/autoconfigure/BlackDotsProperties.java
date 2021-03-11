@@ -21,6 +21,7 @@ import org.springframework.validation.annotation.Validated;
 public class BlackDotsProperties {
 
     public static final String DEFAULT_OCTAVE = "first";
+    private static final String DEFAULT_DEALER = "B.A.C.H. Ltd.";
 
     /**
      * Which octave to play into.
@@ -33,6 +34,11 @@ public class BlackDotsProperties {
      * Which package to handle with dynamic pointcut
      */
     private String pointcutPackage;
+
+    /**
+     * Instruments dealer name.
+     */
+    private String dealerName = DEFAULT_DEALER;
 
     @Valid
     @NestedConfigurationProperty
