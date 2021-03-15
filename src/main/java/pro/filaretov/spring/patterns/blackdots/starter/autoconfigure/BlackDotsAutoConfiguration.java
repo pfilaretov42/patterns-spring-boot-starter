@@ -8,8 +8,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.Import;
+import pro.filaretov.spring.patterns.blackdots.starter.annotation.ConditionalOnRegion;
 import pro.filaretov.spring.patterns.blackdots.starter.wrapper.BlackDotsListener;
-import pro.filaretov.spring.patterns.blackdots.starter.wrapper.DealerControllerAdvice;
 
 /**
  *
@@ -78,6 +78,7 @@ public class BlackDotsAutoConfiguration {
 //    }
 
     @Bean
+    @ConditionalOnRegion
     public BlackDotsListener blackDotsListener() {
         return new BlackDotsListener();
     }
