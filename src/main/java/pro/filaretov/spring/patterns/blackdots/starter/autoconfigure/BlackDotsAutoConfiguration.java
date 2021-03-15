@@ -17,6 +17,7 @@ import pro.filaretov.spring.patterns.blackdots.starter.wrapper.BlackDotsListener
 //@Configuration
 //@ConditionalOnClass(BlackDoter.class)
 @ConditionalOnProperty(value = "black.dots.enabled", havingValue = "true", matchIfMissing = true)
+@ConditionalOnRegion
 @EnableConfigurationProperties(BlackDotsProperties.class)
 @ComponentScan("pro.filaretov.spring.patterns.blackdots.starter")
 @Import(LegacyBeanDefinitionRegistrar.class)
