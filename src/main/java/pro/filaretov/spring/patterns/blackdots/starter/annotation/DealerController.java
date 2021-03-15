@@ -1,4 +1,4 @@
-package pro.filaretov.spring.patterns.blackdots.starter.wrapper;
+package pro.filaretov.spring.patterns.blackdots.starter.annotation;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

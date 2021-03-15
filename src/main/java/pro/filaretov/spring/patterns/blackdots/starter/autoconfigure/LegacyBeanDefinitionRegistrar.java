@@ -10,6 +10,7 @@ import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.GenericBeanDefinition;
 import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;
 import org.springframework.core.type.AnnotationMetadata;
+import pro.filaretov.spring.patterns.blackdots.starter.annotation.Legacy;
 
 /**
  * Import registrar to register bean definitions for legacy components, which in turn will result in these components
