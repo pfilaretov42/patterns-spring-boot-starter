@@ -1,1 +1,3 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=pro.filaretov.spring.patterns.blackdots.starter.autoconfigure.BlackDotsAutoConfiguration
+
+org.springframework.context.ApplicationContextInitializer=pro.filaretov.spring.patterns.blackdots.starter.autoconfigure.ProfileApplicationContextInitialiser
