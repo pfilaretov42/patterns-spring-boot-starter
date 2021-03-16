@@ -40,6 +40,16 @@ public class BlackDotsProperties {
      */
     private String dealerName = DEFAULT_DEALER;
 
+    /**
+     * Region where instrument service is located.
+     */
+    private String region;
+
+    /**
+     * Region where instrument service is located.
+     */
+    private boolean regionEnabled;
+
     @Valid
     @NestedConfigurationProperty
     private Instrument instrument = new Instrument();

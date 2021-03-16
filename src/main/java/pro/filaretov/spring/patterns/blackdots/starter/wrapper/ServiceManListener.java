@@ -8,10 +8,10 @@ import org.springframework.context.event.ContextRefreshedEvent;
  * Listener for a context refreshed event, meaning that it will be triggered when the context is fully built and ready.
  */
 @Slf4j
-public class BlackDotsListener implements ApplicationListener<ContextRefreshedEvent> {
+public class ServiceManListener implements ApplicationListener<ContextRefreshedEvent> {
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
-        log.info("Black dots are ready now");
+        log.info("Service man is set out...");
     }
 }
