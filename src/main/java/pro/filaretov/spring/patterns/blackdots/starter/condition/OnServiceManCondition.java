@@ -1,4 +1,4 @@
-package pro.filaretov.spring.patterns.blackdots.starter.autoconfigure;
+package pro.filaretov.spring.patterns.blackdots.starter.condition;
 
 import java.util.concurrent.atomic.AtomicInteger;
 import javax.swing.JOptionPane;

@@ -46,7 +46,7 @@ public class BlackDotsProperties {
     private String region;
 
     /**
-     * Region where instrument service is located.
+     * Enable or disable regions.
      */
     private boolean regionEnabled;
 

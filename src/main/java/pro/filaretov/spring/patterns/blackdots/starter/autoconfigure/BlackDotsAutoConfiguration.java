@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.Import;
+import pro.filaretov.spring.patterns.blackdots.starter.annotation.ConditionalOnRegion;
 import pro.filaretov.spring.patterns.blackdots.starter.annotation.ConditionalOnServiceMan;
 import pro.filaretov.spring.patterns.blackdots.starter.wrapper.ServiceManListener;
 
@@ -79,7 +80,7 @@ public class BlackDotsAutoConfiguration {
 
     @Bean
     @ConditionalOnServiceMan
-    @ConditionalOnProperty("black.dots.region")
+    @ConditionalOnRegion
     public ServiceManListener blackDotsListener() {
         return new ServiceManListener();
     }
