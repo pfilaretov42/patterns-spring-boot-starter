@@ -17,7 +17,7 @@ public class OnServiceManCondition implements Condition {
     @Override
     public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
         if (CACHED_RESULT.get() == DEFAULT_VALUE) {
-            CACHED_RESULT.set(JOptionPane.showConfirmDialog(null, "Do you want a service man visit?"));
+            CACHED_RESULT.set(JOptionPane.YES_OPTION);
         }
 
         return CACHED_RESULT.get() == JOptionPane.YES_OPTION;
