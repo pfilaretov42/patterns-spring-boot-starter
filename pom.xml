@@ -16,7 +16,7 @@
 
 	<properties>
 		<java.version>15</java.version>
-		<aspectj.version>1.9.6</aspectj.version>
+		<aspectj.version>1.9.8</aspectj.version>
 	</properties>
 
 	<dependencies>
